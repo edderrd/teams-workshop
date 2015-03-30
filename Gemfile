@@ -29,3 +29,4 @@ gem 'sqlite3'
 
 
 gem 'active_model_serializers'
+gem 'faker'
