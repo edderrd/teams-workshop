@@ -1,10 +1,10 @@
 class TeamSerializer < ActiveModel::Serializer
-  attributes :id, :name, :player_count
+  attributes :id, :name, :players
 
   # has_many :players
 
-  def player_count
-    object.players.count
+  def players
+    object.players.pluck(:id)
   end
 
 end
