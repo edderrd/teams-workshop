@@ -1,7 +1,7 @@
 class TeamsController < ApplicationController
 
   def index
-    @teams = Team.take(20)
+    @teams = Team.includes(:players).take(20)
     render json: @teams
   end
 
